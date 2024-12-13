@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome - Maintenance Issue Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            overflow: hidden;
+            background: linear-gradient(120deg, #000000, #1b1b1b);
+            animation: gradientBG 8s infinite alternate;
+        }
+
+        @keyframes gradientBG {
+            0% { background: linear-gradient(120deg, #000000, #1b1b1b); }
+            100% { background: linear-gradient(120deg, #111111, #292929); }
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+        }
+
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+        }
+
+        .welcome-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+        }
+
+        .welcome-container p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .login-btn {
+            background: linear-gradient(120deg, #00c6ff, #0072ff);
+            color: white;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(120deg, #0072ff, #00c6ff);
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .register-btn {
+            background: linear-gradient(120deg, #ff6a00, #ee0979);
+            color: white;
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(120deg, #ee0979, #ff6a00);
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>Maintenance Complaint Portal</header>
+
+    <div class="welcome-container">
+        <h1>Welcome!</h1>
+        <p>Manage complaints effortlessly. Login or register to get started.</p>
+        <div class="button-container">
+            <a href="login.php" class="login-btn">Login</a>
+            <a href="register.php" class="register-btn">Register</a>
+        </div>
+    </div>
+
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 150, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 5 }
+                },
+                "opacity": {
+                    "value": 0.6,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.5,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 200, "line_linked": { "opacity": 0.5 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
